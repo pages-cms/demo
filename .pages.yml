@@ -36,7 +36,6 @@ content:
         options:
           multiple: true
           media: files
-          path: files/attachments
           extensions: [ pdf, zip ]
       - name: body
         label: Body
