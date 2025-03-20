@@ -45,6 +45,8 @@ content:
     label: Authors
     type: collection
     path: authors
+    view:
+      fields: [ photo, name, email, github_id, uuid ]
     fields:
       - name: uuid
         type: uuid
