@@ -47,12 +47,7 @@ content:
           extensions: [ pdf, zip ]
       - name: body
         label: Body
-        type: text
-        options:
-          autoresize: false
-          minlength: 3
-          maxlength: 9
-          rows: 24
+        type: rich-text
   - name: authors
     label: Authors
     type: collection
