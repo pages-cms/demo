@@ -29,8 +29,13 @@ content:
         label: Tag
         type: select
         options:
-          
+          multiple: true
           values: [Technology, Programming, AI, Web, Data, ML, Cybersecurity, Cloud, DevOps, Software]
+      - name: images
+        label: Images
+        type: image
+        options:
+          multiple: true
       - name: attachments
         label: Attachments
         type: file
@@ -56,6 +61,8 @@ content:
       - name: photo
         label: Photo
         type: image
+        options:
+          path: images/photos
       - name: name
         label: Full name
         type: string
