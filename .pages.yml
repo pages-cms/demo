@@ -50,6 +50,9 @@ content:
         type: text
         options:
           autoresize: false
+          minlength: 3
+          maxlength: 9
+          rows: 24
   - name: authors
     label: Authors
     type: collection
