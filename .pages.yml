@@ -17,8 +17,8 @@ content:
       - name: title
         label: Title
         type: string
-      - name: authors
-        label: Authors
+      - name: author
+        label: Author
         type: reference
         options:
           collection: authors
