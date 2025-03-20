@@ -47,7 +47,7 @@ content:
           extensions: [ pdf, zip ]
       - name: body
         label: Body
-        type: rich-text
+        type: text
   - name: authors
     label: Authors
     type: collection
