@@ -48,6 +48,8 @@ content:
       - name: body
         label: Body
         type: text
+        options:
+          autoresize: false
   - name: authors
     label: Authors
     type: collection
