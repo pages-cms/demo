@@ -88,4 +88,4 @@ content:
             image: "https://github.com/{login}.png"
             minlength: 2
             headers:
-              Authorization: Bearer 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
+              Authorization: Bearer ghp_xxxxxxxxx # Disabled the GitHub token
