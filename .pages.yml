@@ -29,7 +29,7 @@ content:
         label: Tag
         type: select
         options:
-          multiple: true
+          
           values: [Technology, Programming, AI, Web, Data, ML, Cybersecurity, Cloud, DevOps, Software]
       - name: attachments
         label: Attachments
