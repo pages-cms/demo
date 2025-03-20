@@ -14,7 +14,7 @@ content:
     path: blog
     type: collection
     view:
-      fields: [ images, title, body ]
+      fields: [ images, title, date, body ]
     fields:
       - name: title
         label: Title
