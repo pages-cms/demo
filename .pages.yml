@@ -1,0 +1,80 @@
+media:
+  - label: Images
+    name: images
+    input: images
+    output: /images
+  - label: Files
+    name: files
+    input: files
+    output: /files
+content:
+  - name: posts
+    label: Posts
+    path: blog
+    type: collection
+    fields:
+      - name: title
+        label: Title
+        type: string
+      - name: authors
+        label: Authors
+        type: reference
+        options:
+          collection: authors
+          search: [ fields.name ]
+          label: "{fields.name}"
+          value: "{github_id}"
+      - name: tag
+        label: Tag
+        type: select
+        options:
+          multiple: true
+          values: [Technology, Programming, AI, Web, Data, ML, Cybersecurity, Cloud, DevOps, Software]
+      - name: attachments
+        label: Attachments
+        type: file
+        options:
+          multiple: true
+          media: files
+          path: files/attachments
+          extensions: [ pdf, zip ]
+      - name: body
+        label: Body
+        type: rich-text
+  - name: authors
+    label: Authors
+    type: collection
+    path: authors
+    fields:
+      - name: uuid
+        type: uuid
+        label: UUID
+        options:
+          editable: true
+      - name: photo
+        label: Photo
+        type: image
+      - name: name
+        label: Full name
+        type: string
+      - name: email
+        label: Email
+        type: string
+        pattern: ^(|[\w\.-]+@[\w\.-]+\.\w+)$
+      - name: github_id
+        label: GitHub ID
+        type: select
+        options:
+          fetch:
+            url: https://api.github.com/search/users
+            method: GET
+            params:
+              q: "{input}"
+            default: "hunvreus"
+            results: items
+            value: "{id}"
+            label: "{login} ({type})"
+            image: "https://github.com/{login}.png"
+            minlength: 2
+            headers:
+              Authorization: Bearer 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
