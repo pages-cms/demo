@@ -13,6 +13,8 @@ content:
     label: Posts
     path: blog
     type: collection
+    view:
+      fields: [ images, title, body ]
     fields:
       - name: title
         label: Title
